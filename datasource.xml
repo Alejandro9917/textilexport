@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<products>
+    <product>
+        <id>PROD00001</id>
+        <name>Product name 1</name>
+        <description>Product name 1</description>
+        <category>Product band 1</category>
+        <imgage>Product band 1</imgage>
+        <stock>0</stock>
+        <price>5.99</price>
+    </product>
+</products>
