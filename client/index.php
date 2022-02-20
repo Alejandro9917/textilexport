@@ -1,12 +1,10 @@
 <?php $title='Inicio'; ?>
+<?php $index='index.php'; ?>
 
 <?php require("resources/templates/header-template.php"); ?>
 
-    <h1>Hola mundo</h1>
+    <?php $datasource = simplexml_load_file("../datasource.xml") or die("Error: Cannot create object"); ?>
 
-    <?php 
-        $xml=simplexml_load_file("../data.xml") or die("Error: Cannot create object");
-        print_r($xml);
-    ?>
+    <?php require("resources/components/store-component.php"); ?>
 
 <?php require("resources/templates/footer-template.php"); ?>
