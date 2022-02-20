@@ -59,5 +59,8 @@
         catch(Exception $ex){
             echo $ex;
         }
+
+        var_dump($errors);
+        var_dump($datasource);
     }    
 ?>
