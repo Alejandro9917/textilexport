@@ -6,8 +6,13 @@
     $datasource = simplexml_load_file("../datasource.xml") or die("Error: No se pudo encontrar el datasource");
 ?>
 
-
 <?php require("resources/templates/header-template.php"); ?>
+
+<?php 
+        if(isset($_SESSION['errors'])){
+            var_dump($_SESSION['errors']);
+        }
+    ?>
 
     <?php require("resources/templates/dashboard-template.php"); ?>
 

@@ -1,5 +1,5 @@
 <?php 
-    class Validations{
+    class validations{
         function isEmpty($var){
             return empty(trim($var));
         }
