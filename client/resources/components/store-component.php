@@ -17,9 +17,17 @@
                                     <img src="<?php echo $product->image ?>" class="img-thumbnail" alt="...">
                                 </div>
                                 <div class="part-2">
-                                    <h3 class="product-title"><?php echo $product->name ?></h3>
-                                    <h4 class="product-price"><?php echo $product->price ?></h4>
+                                    <h3 class="product-title"><?php echo $product->name ?> - <?php echo $product->category ?></h3>
+                                    <h4 class="product-price">$<?php echo $product->price ?></h4>
                                 </div>
+                                <div class="part-2">
+                                    <h3 class="product-title"> 
+                                        <?php if($product->stock>0){ echo "<div class='alert alert-success' role='alert'>Disponible</div>"; } 
+                                        else{ echo "<div class='alert alert-danger' role='alert'>Disponible</div>"; }?></h3>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo $product->id; ?>">
+                                    Ver más
+                                </button>
                             </div>
 						</div>
                         <?php } ?>

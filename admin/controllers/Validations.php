@@ -23,5 +23,15 @@
         function isUrl($var){
             return preg_match('/(?>https?:)?\/\/(\w+\.)?imgur\.com\/(\S*)(\.[a-zA-Z]{3})/', $var);
         }
+
+        function isUnique($var){
+            $products = simplexml_load_file("../../datasource.xml") or die("Error: No se pudo encontrar el datasource");
+            $search = $products->xpath("//product/id[contains(text(), '$var')]");
+            if(count($search) > 0) { // if found
+                return false;
+            }
+
+            return true;
+        }
     }
 ?>

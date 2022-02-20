@@ -1,10 +1,11 @@
 <?php
-    //Validations 
-    require("Validations.php");
-
-    $validation = new validations();
+    //Datasource
     $products = simplexml_load_file("../../datasource.xml") or die("Error: No se pudo encontrar el datasource");
     $product = $products->addChild("product");
+
+    //Validations 
+    require("Validations.php");
+    $validation = new validations();
 
     if(isset($_POST)){
         extract($_POST);
@@ -14,6 +15,8 @@
             array_push($errors, "Debes ingresar el id del producto");
         } else if(!$validation->isId($id)){
             array_push($errors, "El formarto de ID no coindice con PROD#####");
+        } else if(!$validation->isUnique($id)){
+            array_push($errors, "El ID debe ser único");
         } else{$product->addChild("id", $id);}
         if(!isset($name) || $validation->isEmpty($name)){
             array_push($errors, "Debes ingresar el nombre del producto");
