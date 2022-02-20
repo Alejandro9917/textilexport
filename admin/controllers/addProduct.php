@@ -42,10 +42,9 @@
             array_push($errors, "El formarto del precio no coincide");
         }
 
-        /* try{
+        try{
             if(count($errors)>0 && count($_POST)>0){ 
-                $products = simplexml_load_file("../datasource.xml") or die("Error: No se pudo encontrar el datasource");
-                $product = $products->addChild("product");
+                $product = $datasource->addChild("product");
                 $product->addChild("id", $id);
                 $product->addChild("name", $name);
                 $product->addChild("description", $description);
@@ -53,12 +52,12 @@
                 $product->addChild("image", $image);
                 $product->addChild("stock", $stock);
                 $product->addChild("price", $price);
-                file_put_contents('../ejemplo.txt', $product) or print_r(error_get_last());
+                file_put_contents('../ejemplo.txt', $datasource) or print_r(error_get_last());
             } 
         }
 
         catch(Exception $ex){
             echo $ex;
-        } */
+        }
     }    
 ?>
