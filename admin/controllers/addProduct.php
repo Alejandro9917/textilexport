@@ -47,6 +47,7 @@
         if(count($errors) > 0){
             session_start();
             $_SESSION['errors'] = $errors;
+            $_SESSION['post'] = true;
             header('location:../index.php');
         }
 

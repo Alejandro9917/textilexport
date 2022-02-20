@@ -1,14 +1,3 @@
-<?php 
-    if(isset($_SESSION['errors'])){
-        if(count($_SESSION['errors'])>0 && count($_POST)>0){
-        echo "<div class='mx-3 mt-3 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative'><ul>";  
-            foreach($errors as $error){
-                echo "<li><span class='block sm:inline'>$error</span></li>";
-            }
-            echo "</ul></div>";
-        }
-    }
-?>
 <div>
     <div class="mt-5 md:mt-0 md:col-span-2">
         <form action="controllers/addProduct.php" method="POST">

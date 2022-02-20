@@ -23,4 +23,4 @@
 			1.99
 		</price>
 	</product>
-<product><id>PROD00003</id><name>Tela blanca</name><description>Desc</description><category>Textil</category><image>https://i.imgur.com/mxMcRrH.png</image><stock>555</stock><price>13.99</price></product></products>
+<product><id>PROD00003</id><name>Tela blanca</name><description>Desc</description><category>Textil</category><image>https://i.imgur.com/mxMcRrH.png</image><stock>555</stock><price>13.99</price></product><product><id>PROD00004</id><name>Tela roja</name><description>Desc</description><category>Textil</category><image>https://i.imgur.com/snxKSRI.png</image><stock>555</stock><price>1.99</price></product><product><id>PROD00004</id><name>Tela roja</name><description>Desc</description><category>Textil</category><image>https://i.imgur.com/mxMcRrH.png</image><stock>515</stock><price>13.99</price></product></products>
