@@ -3,6 +3,7 @@
     require("Validations.php");
 
     $validation = new Validations();
+    $products = simplexml_load_file("../../datasource.xml") or die("Error: No se pudo encontrar el datasource");
 
     if(isset($_POST)){
         extract($_POST);
@@ -44,7 +45,7 @@
 
         try{
             if(count($errors)>0 && count($_POST)>0){ 
-                $product = $datasource->addChild("product");
+                $product = $products->addChild("product");
                 $product->addChild("id", $id);
                 $product->addChild("name", $name);
                 $product->addChild("description", $description);
@@ -52,15 +53,13 @@
                 $product->addChild("image", $image);
                 $product->addChild("stock", $stock);
                 $product->addChild("price", $price);
-                file_put_contents('../ejemplo.txt', $datasource) or print_r(error_get_last());
+                file_put_contents('ejemplo.txt', $products) or print_r(error_get_last());
+                var_dump($product);
             } 
         }
 
         catch(Exception $ex){
             echo $ex;
         }
-
-        var_dump($errors);
-        var_dump($datasource);
     }    
 ?>
