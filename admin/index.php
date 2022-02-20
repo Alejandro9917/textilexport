@@ -3,7 +3,7 @@
     $title='Dashboard'; 
 
     //XML import
-    $datasource = simplexml_load_file("../datasource.xml") or die("Error: No se pudo encontrar el datasource");
+    //$datasource = simplexml_load_file("../datasource.xml") or die("Error: No se pudo encontrar el datasource");
 ?>
 
 

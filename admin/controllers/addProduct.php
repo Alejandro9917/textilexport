@@ -3,7 +3,6 @@
     require("Validations.php");
 
     $validation = new Validations();
-    $products = simplexml_load_file("../datasource.xml") or die("Error: No se pudo encontrar el datasource");
 
     if(isset($_POST)){
         extract($_POST);
@@ -43,8 +42,9 @@
             array_push($errors, "El formarto del precio no coincide");
         }
 
-        try{
+        /* try{
             if(count($errors)>0 && count($_POST)>0){ 
+                $products = simplexml_load_file("../datasource.xml") or die("Error: No se pudo encontrar el datasource");
                 $product = $products->addChild("product");
                 $product->addChild("id", $id);
                 $product->addChild("name", $name);
@@ -59,6 +59,6 @@
 
         catch(Exception $ex){
             echo $ex;
-        }
+        } */
     }    
 ?>
